@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "web-ext run",
+    "build": "web-ext build",
+    "eslint": "eslint .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prettier": "prettier --list-different \"**/*.{css,html,js,md}\"",
+    "prettier:fix": "prettier --write \"**/*.{css,html,js,md}\"",
+    "test": "npm run eslint && npm run prettier && npm run build"
+  },
+  "devDependencies": {
+    "eslint": "5.11.1",
+    "eslint-config-lydell": "12.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "prettier": "1.15.3",
+    "web-ext": "2.9.3"
+  }
+}
