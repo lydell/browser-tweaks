@@ -21,4 +21,4 @@ Personal browser extension containing a couple of tweaks.
 2. Enable Developer Mode.
 3. Load the `src/` directory as an unpacked extension.
 
-[Firefox Developer Edition]: https://www.mozilla.org/firefox/developer/
+[firefox developer edition]: https://www.mozilla.org/firefox/developer/
