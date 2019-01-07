@@ -5,6 +5,11 @@
   "author": "Simon Lydell",
   "description": "Personal browser tweaks.",
   "homepage_url": "https://github.com/lydell/browser-tweaks",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "browser-tweaks@lydell.github.io"
+    }
+  },
   "icons": {
     "48": "title.svg"
   },
