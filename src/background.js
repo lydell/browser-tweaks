@@ -63,6 +63,12 @@ async function start() {
         });
         break;
 
+      case "duplicate-tab":
+        chrome.tabs.query({ currentWindow: true, active: true }, ([tab]) => {
+          chrome.tabs.duplicate(tab.id);
+        });
+        break;
+
       case "toggle-pinned-tab":
         chrome.tabs.query({ currentWindow: true, active: true }, ([tab]) => {
           chrome.tabs.update(tab.id, { pinned: !tab.pinned });

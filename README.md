@@ -8,6 +8,7 @@ Personal browser extension containing a couple of tweaks.
   pressing the Menu key (Firefox only).
 - Alt+Shift+U to close tabs to the right.
 - Alt+Shift+P to toggle pinned tab.
+- Alt+Shift+D to duplicate tab.
 - Custom CSS for WikiPedia.
 
 ### Firefox
