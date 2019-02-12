@@ -5,7 +5,7 @@
     "build": "web-ext build",
     "eslint": "eslint .",
     "eslint:fix": "npm run eslint -- --fix",
-    "prettier": "prettier --list-different \"**/*.{css,html,js,md}\"",
+    "prettier": "prettier --check \"**/*.{css,html,js,md}\"",
     "prettier:fix": "prettier --write \"**/*.{css,html,js,md}\"",
     "test": "npm run eslint && npm run prettier && npm run build"
   },
