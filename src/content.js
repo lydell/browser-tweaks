@@ -38,7 +38,7 @@ async function start() {
       if (event.key === "ContextMenu") {
         chrome.runtime.sendMessage({
           type: "Title",
-          title: getTitle(event.target),
+          title: findTitle(event.target),
         });
       }
 
@@ -82,6 +82,33 @@ async function start() {
     },
     { passive: true, capture: true }
   );
+}
+
+const TITLE_SELECTOR = "[title], [alt], [aria-label]";
+
+function findTitle(element) {
+  const title1 = getTitle(element);
+  if (title1 != null) {
+    return title1;
+  }
+
+  const parent = element.closest(TITLE_SELECTOR);
+  if (parent != null) {
+    const title2 = getTitle(parent);
+    if (title2 != null) {
+      return title2;
+    }
+  }
+
+  const children = element.querySelectorAll(TITLE_SELECTOR);
+  if (children.length === 1) {
+    const title3 = getTitle(children[0]);
+    if (title3 != null) {
+      return title3;
+    }
+  }
+
+  return undefined;
 }
 
 function getTitle(element) {

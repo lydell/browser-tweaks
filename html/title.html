@@ -26,5 +26,14 @@
         >Long href and long title</a
       >
     </p>
+    <p tabindex="0"><span title="Child title">Child title</span></p>
+    <p title="Parent title">
+      <span><span tabindex="0">Parent title</span></span>
+    </p>
+    <p tabindex="0">
+      Child title skipped if more than one.<br />
+      <span title="Child title 1">child title 1</span><br />
+      <span title="Child title 2">child title 2</span>
+    </p>
   </body>
 </html>
