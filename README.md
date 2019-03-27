@@ -9,6 +9,8 @@ Personal browser extension containing a couple of tweaks.
 - Alt+Shift+U to close tabs to the right.
 - Alt+Shift+P to toggle pinned tab.
 - Alt+Shift+D to duplicate tab.
+- `mailto:` and `tel:` links are `prompt()`:ed rather than trying to open an
+  email client, or simply not being understood.
 - Custom CSS for WikiPedia.
 
 ### Firefox

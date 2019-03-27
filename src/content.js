@@ -82,6 +82,20 @@ async function start() {
     },
     { passive: true, capture: true }
   );
+
+  window.addEventListener(
+    "click",
+    event => {
+      const { target } = event;
+      const selector = 'a[href^="mailto:" i], a[href^="tel:" i]';
+      const link = target.matches(selector) ? target : target.closest(selector);
+      if (link != null) {
+        event.preventDefault();
+        prompt(link.protocol, link.href.replace(/^(mailto|tel):/i, ""));
+      }
+    },
+    { passive: false, capture: true }
+  );
 }
 
 const TITLE_SELECTOR = "[title], [alt], [aria-label]";

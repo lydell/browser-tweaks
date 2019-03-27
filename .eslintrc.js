@@ -10,7 +10,13 @@ module.exports = {
     es6: true,
     node: true,
   },
+  globals: {
+    alert: false,
+    confirm: false,
+    prompt: false,
+  },
   rules: Object.assign({}, baseRules(), {
+    "no-alert": "off",
     "no-implicit-globals": "off",
     "prettier/prettier": "error",
     strict: "off",
