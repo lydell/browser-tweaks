@@ -10,13 +10,6 @@
       "id": "browser-tweaks@lydell.github.io"
     }
   },
-  "icons": {
-    "48": "title.svg"
-  },
-  "permissions": [
-    "<all_urls>",
-    "contextMenus"
-  ],
   "commands": {
     "close-tabs-to-right": {
       "suggested_key": {
@@ -38,30 +31,13 @@
     }
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "all_frames": true,
-      "match_about_blank": true,
+      "matches": ["*://*.wikipedia.org/*"],
       "run_at": "document_start",
-      "js": [
-        "content.js"
-      ]
-    },
-    {
-      "matches": [
-        "*://*.wikipedia.org/*"
-      ],
-      "run_at": "document_start",
-      "css": [
-        "wikipedia.css"
-      ]
+      "css": ["wikipedia.css"]
     }
   ]
 }
