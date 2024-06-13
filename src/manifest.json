@@ -32,12 +32,5 @@
   },
   "background": {
     "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://*.wikipedia.org/*"],
-      "run_at": "document_start",
-      "css": ["wikipedia.css"]
-    }
-  ]
+  }
 }
